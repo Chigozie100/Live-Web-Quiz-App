@@ -21,7 +21,8 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public User joinQuiz(UserRequestDto requestDto) {
-        return userRepository.save(Mapper.mapToEntity(requestDto));
+        User user= Mapper.mapToEntity(requestDto);
+        return userRepository.save(user);
     }
 
     @Override

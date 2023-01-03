@@ -1,5 +1,7 @@
 package com.restapi.livewebquizapp.utils;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.restapi.livewebquizapp.dtos.Responses.UserResponseDto;
 import com.restapi.livewebquizapp.dtos.requests.AnswerRequestDto;
 import com.restapi.livewebquizapp.dtos.requests.UserRequestDto;
@@ -28,5 +30,10 @@ public class Mapper {
         responseDto.setScore(user.getScore());
         responseDto.setRound(user.getRound());
         return responseDto;
+    }
+
+    public static String mapToJson(Object object) throws JsonProcessingException {
+        ObjectMapper objectMapper = new ObjectMapper();
+        return objectMapper.writeValueAsString(object);
     }
 }

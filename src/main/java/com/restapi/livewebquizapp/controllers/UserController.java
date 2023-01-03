@@ -2,7 +2,6 @@ package com.restapi.livewebquizapp.controllers;
 
 import com.restapi.livewebquizapp.dtos.Responses.APIResponse;
 import com.restapi.livewebquizapp.dtos.requests.UserRequestDto;
-import com.restapi.livewebquizapp.model.User;
 import com.restapi.livewebquizapp.service.UserService;
 import com.restapi.livewebquizapp.utils.Responder;
 import lombok.AllArgsConstructor;
